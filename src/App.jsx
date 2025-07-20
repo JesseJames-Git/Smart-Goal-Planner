@@ -4,6 +4,7 @@ import Heading from './components/Heading'
 import GoalsForm from './components/content/GoalsForm'
 import GoalsDisplay from './components/content/GoalsDisplay'
 import ProgressTrack from './components/content/ProgressTrack'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -42,8 +43,12 @@ const App = () => {
           goalName = {goal.name}
           targetAmount = {goal.targetAmount}
           savedAmount = {goal.savedAmount}
+          dateCreated = {goal.createdAt}
+          deadlineDate = {goal.deadline}
         />
       ))}
+
+      <Footer />
     </div>
   )
 }
