@@ -3,15 +3,33 @@
     padding: 0;
 }
 #displayer{
-    text-align: center;   
-    padding :50px;
-    background-color: rgba(138, 157, 173, 0.271);
-    
+    background-color: rgba(114, 118, 114, 0.448);
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 60px ;
+    padding-bottom: 20px;
+    width: 1200px;
+    display: block;
+    justify-self: center;
+    margin-bottom: 80px;
+    height: auto;
 }
 #displayer h2{
     font-size: 40px;
-
+    text-align: center;
+    margin-bottom: 20px;
 }
 #displayer p{
-    font-size: 20px;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+#displayer button{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 150px;
+    height:50px;
+    display: block;
+    justify-self: center;
 }

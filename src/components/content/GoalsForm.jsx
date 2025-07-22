@@ -1,4 +1,5 @@
 import React from 'react'
+import "../../stlying/goalForm.css"
 
 const GoalsForm = ({url}) => {
 
@@ -34,7 +35,7 @@ function handleSubmit(event) {
 
 
   return (
-    <div>
+    <div id='goalForm'>
       <h2>Goal Form</h2>
       <form onSubmit={handleSubmit}>
 

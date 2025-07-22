@@ -1,3 +1,45 @@
 *{
-    
+    margin: 0;
+    padding: 0;
 }
+
+#goalForm{
+    background-color: rgba(114, 118, 114, 0.448);
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 60px ;
+    width: 1200px;
+    display: block;
+    justify-self: center;
+    margin-bottom: 80px;
+    height: 640px;
+}
+
+#goalForm h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+#goalForm label{
+    font-size: 30px;
+}
+
+#goalForm input{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#goalForm button{
+    display: block;
+    justify-self: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    width: 150px;
+    height: 50px;
+}
+
+

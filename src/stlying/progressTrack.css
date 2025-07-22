@@ -2,14 +2,28 @@
     margin: 0;
     padding: 0;
 }
-#trackerContainer{
-    text-align: center;   
 
+#trackerContainer{
+    background-color: rgba(114, 118, 114, 0.448);
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 60px ;
+    padding-bottom: 20px;
+    width: 1200px;
+    display: block;
+    justify-self: center;
+    margin-bottom: 80px;
+    height: auto;
 }
+
 #trackerContainer h2{
     font-size: 40px;
-
+    text-align: center;
+    margin-bottom: 15px;
 }
 #trackerContainer p{
-    font-size: 20px;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
