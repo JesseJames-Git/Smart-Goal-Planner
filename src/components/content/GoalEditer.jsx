@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const GoalEditor = ({ goal, url, onEditComplete }) => {
   const [formData, setFormData] = useState({
@@ -7,18 +7,18 @@ const GoalEditor = ({ goal, url, onEditComplete }) => {
     savedAmount: goal.savedAmount,
     category: goal.category,
     deadline: goal.deadline
-  });
+  })
 
   function handleChange(e) {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
       [name]: name === "targetAmount" || name === "savedAmount" ? Number(value) : value
-    }));
+    }))
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
 
     fetch(`${url}/${goal.id}`, {
       method: "PATCH",
@@ -28,16 +28,15 @@ const GoalEditor = ({ goal, url, onEditComplete }) => {
       body: JSON.stringify(formData)
     })
     .then((res) => {
-      if (!res.ok) throw new Error(`Failed to update goal`);
-      return res.json();
+      if (!res.ok) throw new Error(`Failed to update goal`)
+      return res.json()
     })
     .then((updatedGoal) => {
-      console.log("✅ Goal updated:", updatedGoal);
-      if (onEditComplete) onEditComplete(updatedGoal);
+      if (onEditComplete) onEditComplete(updatedGoal)
     })
     .catch((err) => {
-      console.error("💥 Update error:", err.message);
-    });
+      console.error("Update error:", err.message)
+    })
   }
 
   return (
@@ -61,7 +60,7 @@ const GoalEditor = ({ goal, url, onEditComplete }) => {
 
       <button type="submit">Update Goal</button>
     </form>
-  );
-};
+  )
+}
 
-export default GoalEditor;
+export default GoalEditor

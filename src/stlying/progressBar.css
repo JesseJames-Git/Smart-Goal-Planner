@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#outerBox{
+    width: 200px;
+    height: 50px;
+}
+
+#colourbox{
+    width: 200px;
+    height: 50px;
+    background-color: rgba(74, 118, 74, 0.879);
+}

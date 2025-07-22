@@ -1,8 +1,13 @@
 import React from 'react'
+import "../../stlying/progressBar.css"
 
-const ProgressBar = () => {
+const ProgressBar = ({goalAmount, savedAmount}) => {
   return (
-    <div>ProgressBar</div>
+    <div id='outerBox'>
+      <div id='colourBox'>
+        
+      </div>
+    </div>
   )
 }
 

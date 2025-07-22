@@ -1,5 +1,6 @@
 import React from 'react'
 import ProgressBar from '../content/ProgressBar'
+import "../../stlying/progressTrack.css"
 
 const ProgressTrack = ({
   goalId, 
@@ -31,7 +32,7 @@ const ProgressTrack = ({
   }
 
   return (
-      <div key={goalId}>
+      <div key={goalId} id='trackerContainer'>
       <h2>{goalName}</h2>
       <p>Saved Amount(Deposit) : {savedAmount}</p>
       <p>Remaining amount : {remainingAmount}</p>
@@ -39,7 +40,10 @@ const ProgressTrack = ({
 
       <ProgressBar />
 
-       <DeadlineStatus />
+       <DeadlineStatus
+        goalAmount = {targetAmount}
+        savedAmount = {savedAmount}
+      />
     
     </div>
   )

@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#displayer{
+    text-align: center;   
+    padding :50px;
+    background-color: rgba(138, 157, 173, 0.271);
+    
+}
+#displayer h2{
+    font-size: 40px;
+
+}
+#displayer p{
+    font-size: 20px;
+}

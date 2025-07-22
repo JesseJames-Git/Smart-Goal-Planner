@@ -1,4 +1,5 @@
 import React from 'react'
+import "../../stlying/goalsDisplay.css"
 
 const GoalsDisplay = ({
   displayId, 
@@ -10,12 +11,14 @@ const GoalsDisplay = ({
 }) => {
 
         return (
-            <div key = {displayId}>
+            <div key = {displayId} id='displayer'>
                 <h2>{displayName}</h2>
                 <p>Target Amount: {displayTargetAmount}</p>
                 <p>Saved Amount: {displaySavedAmount}</p>
                 <p>Category: {displayCategory}</p>
                 <p>Deadline: {displayDeadline}</p>
+                <button onClick={() => setGoalBeingEdited(goal)}>Edit</button>
+
             </div>
         )
 }

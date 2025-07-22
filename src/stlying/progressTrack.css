@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#trackerContainer{
+    text-align: center;   
+
+}
+#trackerContainer h2{
+    font-size: 40px;
+
+}
+#trackerContainer p{
+    font-size: 20px;
+}
