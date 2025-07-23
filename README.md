@@ -16,9 +16,6 @@ A HTML document was used to diplay the results and after enough testing the code
 - Internet acces
 - A morden web browser
 
-## Remote use
-In this Repository, the deployed page is a link to the actual website. In there feel free to input details and manipulate data as you wish.
-
 ## Local use
 If you would like to use my code you'll need:
 - Understanding of using the terminal and Firm understanding of HTML, CSS, and JavaScript.
