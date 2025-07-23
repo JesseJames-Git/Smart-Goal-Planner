@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#buttonSection{
+    display: flex;
+    justify-self: center;
+    margin-left: 250px;
+}
+#buttonSection button{
+    margin-right: 20px;
+    width: 150px;
+    height: 55px;
+}

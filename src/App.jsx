@@ -5,6 +5,7 @@ import GoalsDisplay from './components/content/GoalsDisplay'
 import ProgressTrack from './components/content/ProgressTrack'
 import Header from './components/Header'
 import GoalEditor from './components/content/GoalEditer'
+import "./stlying/App.css"
 
 const App = () => {
   const GoalApiUrl = "http://localhost:3000/goals"
@@ -85,6 +86,13 @@ const App = () => {
               displayDeadline={currentGoal.deadline}
             />
 
+            <div id='buttonSection'>
+              <button onClick={handlePrevious}>Previous</button>
+              <button onClick={handleNext}>Next</button>
+              <button onClick={handleDelete}>Delete Goal</button>
+              <button onClick={() => setGoalBeingEdited(currentGoal)}>Edit Goal</button>
+            </div>
+
             <ProgressTrack
               goalId={currentGoal.id}
               goalName={currentGoal.name}
@@ -93,13 +101,6 @@ const App = () => {
               dateCreated={currentGoal.createdAt}
               deadlineDate={currentGoal.deadline}
             />
-
-            <div>
-              <button onClick={handlePrevious}>Previous</button>
-              <button onClick={handleNext}>Next</button>
-              <button onClick={handleDelete}>Delete Goal</button>
-              <button onClick={() => setGoalBeingEdited(currentGoal)}>Edit Goal</button>
-            </div>
           </>
         )
       )}

@@ -17,8 +17,6 @@ const GoalsDisplay = ({
                 <p>Saved Amount: {displaySavedAmount}</p>
                 <p>Category: {displayCategory}</p>
                 <p>Deadline: {displayDeadline}</p>
-                <button onClick={() => setGoalBeingEdited(goal)}>Edit</button>
-
             </div>
         )
 }
