@@ -8,7 +8,7 @@ import GoalEditor from './components/content/GoalEditer'
 import "./stlying/App.css"
 
 const App = () => {
-  const GoalApiUrl = "http://localhost:3000/goals"
+  const GoalApiUrl = "https://smartgoalplanner-backend.onrender.com/goals"
   const [goals, setGoals] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [goalBeingEdited, setGoalBeingEdited] = useState(null)
