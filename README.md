@@ -16,6 +16,15 @@ A HTML document was used to diplay the results and after enough testing the code
 - Internet acces
 - A morden web browser
 
+## On Web Browser:
+Here is the deployed app link: 
+https://smart-goal-planner-gilt.vercel.app/
+
+Feel free to input details in the forms.
+
+**PLEASE NOTE:** 
+**Server could take sometime for requests to be made. If you find some things not functioning well on first the app, please give it some time.**
+
 ## Local use
 If you would like to use my code you'll need:
 - Understanding of using the terminal and Firm understanding of HTML, CSS, and JavaScript.
