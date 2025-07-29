@@ -1,11 +1,16 @@
 import React from 'react'
 import "../../stlying/progressBar.css"
 
-const ProgressBar = ({goalAmount, savedAmount}) => {
+const ProgressBar = ({ goalAmount, savedAmount }) => {
+  const percentage = Math.min((savedAmount / goalAmount) * 100, 100)
+
   return (
-    <div id='outerBox'>
-      <div id='colourBox'>
-        
+    <div className="outerBox">
+      <div
+        className="colourBox"
+        style={{ width: `${percentage}%` }}
+      >
+        <span className="percentageLabel">{Math.floor(percentage)}%</span>
       </div>
     </div>
   )

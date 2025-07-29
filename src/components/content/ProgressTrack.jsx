@@ -12,39 +12,42 @@ const ProgressTrack = ({
 }) => {
 
   const remainingAmount = targetAmount - savedAmount
-  const dateDifferenceinMs = deadlineDate - dateCreated
-  const dateDifferenceInDays = dateDifferenceinMs / (1000 * 60 *60 * 24)
 
-  function DeadlineStatus(){
-    if(dateDifferenceInDays < 30 ){
-      return(
-        <p>
-          <em>Warning! Deadline is in {dateDifferenceInDays} days</em>
-        </p>
-      )
-    } else if (dateDifferenceInDays < 0){          
-      return(
-        <p>
-          <em>Goal OverDue</em>
-        </p>
-      )
+  const created = new Date(dateCreated)
+  const deadline = new Date(deadlineDate)
+  const timeDiff = deadline - created
+  const dateDifferenceInDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24))
+
+  const deadlineStatus = () => {
+    const today = new Date()
+    const deadline = new Date(deadlineDate)
+
+    const diffInMs = deadline - today
+    const daysLeft = Math.ceil(diffInMs / (1000 * 60 * 60 * 24))
+
+    if (daysLeft < 0) {
+      return <p><em style={{ color: 'red' }}>Goal Overdue</em></p>
+    } else if (daysLeft < 30) {
+      return <p><em style={{ color: 'orange' }}>Warning! Deadline is in {daysLeft} days</em></p>
+    } else {
+      return null
     }
   }
 
+
   return (
-      <div key={goalId} id='trackerContainer'>
+    <div key={goalId} id='trackerContainer'>
       <h2>{goalName}</h2>
-      <p>Saved Amount(Deposit) : {savedAmount}</p>
-      <p>Remaining amount : {remainingAmount}</p>
-      <p>Deadline Date : {deadlineDate}</p>
+      <p>Saved Amount: {savedAmount}</p>
+      <p>Remaining Amount: {remainingAmount}</p>
+      <p>Deadline Date: {new Date(deadlineDate).toDateString()}</p>
 
-      <ProgressBar />
-
-       <DeadlineStatus
-        goalAmount = {targetAmount}
-        savedAmount = {savedAmount}
+      <ProgressBar 
+        goalAmount={targetAmount}
+        savedAmount={savedAmount}
       />
-    
+
+      {deadlineStatus()}
     </div>
   )
 }

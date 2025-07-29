@@ -1,20 +1,31 @@
 import React from 'react'
 
-const Header = (goals, targetAmount, savedAmount) => {
+const Header = ({ goals }) => {
+  const numberOfGoals = goals.length
 
-  // const numberOfGoals = goals.length
-  // const totalSavedAmount = goals.reduce((acc, goal) => {
-  //   return acc + goal.savedAmount
-  // })
+  const totalSavedAmount = goals.reduce((acc, goal) => acc + goal.savedAmount, 0)
 
+  const totalTargetAmount = goals.reduce((acc, goal) => acc + goal.targetAmount, 0)
 
-  // return (
-  //   <div>
-  //     <p>Total Number of Goals :{numberOfGoals} </p>
-  //     <p>Total amount saved across all goals: {totalSavedAmount}</p>
-  //     <p>Goals Completed : </p>
-  //   </div>
-  // )
+  const goalsCompleted = goals.filter(goal => goal.savedAmount >= goal.targetAmount).length
+
+  const totalProgressPercentage = totalTargetAmount
+    ? Math.floor((totalSavedAmount / totalTargetAmount) * 100)
+    : 0
+
+  return (
+    <div style={{
+      padding: '16px',
+      borderBottom: '2px solid #ccc',
+      marginBottom: '20px'
+    }}>
+      <h1>Goal Tracker Summary</h1>
+      <p><strong>Total Number of Goals:</strong> {numberOfGoals}</p>
+      <p><strong>Total Amount Saved:</strong> ${totalSavedAmount.toLocaleString()}</p>
+      <p><strong>Goals Completed:</strong> {goalsCompleted} / {numberOfGoals}</p>
+      <p><strong>Overall Progress:</strong> {totalProgressPercentage}%</p>
+    </div>
+  )
 }
 
 export default Header
